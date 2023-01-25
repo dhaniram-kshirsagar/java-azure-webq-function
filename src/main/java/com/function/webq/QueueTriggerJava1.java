@@ -12,7 +12,7 @@ public class QueueTriggerJava1 {
      */
     @FunctionName("QueueTriggerJava1")
     public void run(
-        @QueueTrigger(name = "message", queueName = "webqarchi", connection = "webqarch_STORAGE") String message,
+        @QueueTrigger(name = "message", queueName = "webqarchi", connection = "AzureWebJobsStorage") String message,
         final ExecutionContext context
     ) {
         context.getLogger().info("Java Queue trigger function processed a message: " + message);
